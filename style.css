@@ -1,0 +1,110 @@
+body{
+    background-color: var(--COLOR);
+    display: flex;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    margin: 0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+
+:root{
+    --COLORMENU:  rgba(0, 0, 0, 0.689);
+    --COLOR:rgb(26, 26, 28);
+
+}
+   
+:root{
+    --CONTAINERCOLOR : rgb(34, 60, 72); 
+    --BOX: 2px; 
+}
+
+
+.container .display, .container .inputSection{
+    display: grid;
+    
+}
+
+.container{
+    background-color: aqua;
+    padding: 15px; 
+    min-height: 75px; 
+    border-radius: 20px;
+    position: relative;
+
+}
+
+/* Input */
+
+input{
+    padding: 5px; 
+    font-size: 19px;
+    outline: none;
+    border: 2px solid black;
+    background-color: transparent;
+    margin-top: 10px; 
+    border-radius: 10px;
+}
+
+span{
+    position: absolute;
+    top: 34px; 
+    left: 19px;
+    font-size: 15px;
+    padding: 1px; 
+}
+
+input:focus +span, input:valid + span{
+    transform: translate(8px, -16px);
+    background-color: aqua;
+    font-size: 13px;
+}
+
+/* Button */
+
+.inputSection{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#btn{
+    margin-top: 5px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.886);
+    color: white; 
+    position: relative;
+    bottom: 3px; 
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 10;
+    padding: 10px; 
+}
+
+
+#btn::before{
+    content:''; 
+    position: absolute;
+    top: 0; 
+    left:0;
+    right:0;
+    bottom: 0;  
+    background:rgb(154, 19, 203);
+    z-index: -1;
+    transform: scale(0);  
+    transition: transform 400ms ease-in-out;
+}
+
+#btn:hover::before{
+    transform: scale(1.30);
+}
+
+.display{
+    margin-top: 10px; 
+}
