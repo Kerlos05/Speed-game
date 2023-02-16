@@ -1,0 +1,159 @@
+body{
+    background-color: var(--COLOR);
+    display: flex;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    margin: 0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+
+:root{
+    --COLORMENU:  rgba(0, 0, 0, 0.689);
+    --COLOR:rgb(26, 26, 28);
+
+}
+   
+.navbar{
+    position: absolute;
+    top: 0; 
+    left: 0; 
+}
+
+:root{
+    --COLORBACKGROUND: aliceblue; 
+}
+
+.container{
+    top: 130px; 
+    max-width: 300px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--COLORBACKGROUND);
+    padding: 20px; 
+}
+
+.checkAllStats{
+    position: absolute;
+    top: 0; 
+    left: -280px; 
+    background-color: transparent;
+    color: var(--COLORBACKGROUND);
+    padding: 0; 
+}
+
+textarea{
+    width: 100%;
+    height: 200px;
+    outline: none;
+    padding: 10px; 
+    font-weight: 800;
+    margin-top: 10px;
+    resize: none;
+}
+
+.correct{
+    color: rgb(0, 255, 34, 0.8); 
+}
+
+.incorrect{
+    color: red;
+    text-decoration: line-through;
+}
+
+.container .icons{
+    display: flex;
+    gap: 15px; 
+    position: absolute;
+    bottom: 1px; 
+    right: 20px;
+    cursor: pointer; 
+    padding:10px; 
+    margin-top: 210px;
+    background-color: var(--COLORBACKGROUND);
+}
+
+.fa:hover{
+    transform: scale(130%);
+}
+
+#timer{
+    position: absolute;
+    top:-20px; 
+    right: -20px; 
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    color: var(--COLORBACKGROUND);
+    padding:20px; 
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+}
+
+textarea{
+    background-color: var(--COLORBACKGROUND);
+    border: 2px solid black;
+}
+
+#stats{
+    background-color: rgb(155, 157, 159);
+    color: black;
+    position: absolute;
+    top:100px; 
+    width: 450px; 
+    padding: 10px; 
+    height: 380px; 
+    text-align: center;
+    border-radius: 20px;
+    display: none;
+}
+
+#stats .fa {
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    margin: 10px;
+}
+
+legend{
+    position: absolute;
+    bottom:-45px; 
+    display: none;
+    color: var(--COLORBACKGROUND);
+}
+
+.fa:hover legend{
+    display: inline;
+}
+
+
+@media screen and (max-width: 420px){
+    .container{
+        position: relative;
+        top: 10px; 
+    }
+    #timer{
+        right: -4px;
+    }
+
+    #stats{
+        width: 100%; 
+        top: 185px; 
+    }
+    body{
+        font-size: 18px;
+    }
+    legend{
+        display: none !important; 
+    }
+
+}
